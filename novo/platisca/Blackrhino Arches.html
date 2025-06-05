@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Black Rhino Arches | Coro's Rims</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Coro's rims</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<section class="py-5">
+    <div class="container">
+        <h1 class="text-center mb-4">Black Rhino Arches</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../slike/blackrhino.jpg" alt="Black Rhino Arches" class="img-fluid rounded shadow" />
+                <p class="text-center mt-2"><em>Na sliki: Black Rhino Arches, velikosti 15", 17", 18", 20"</em></p>
+            </div>
+            <div class="col-md-6">
+                <h3>Opis</h3>
+                <p>Robustna platišča, primerna za SUV vozila, terence in avanturiste. Na voljo v velikostih 15", 17", 18", in 20". Odlikuje jih trpežnost in edinstven dizajn.</p>
+                
+                <h3>Specifikacije</h3>
+                <ul>
+                    <li><strong>Velikosti:</strong> 15", 17", 18", 20"</li>
+                    <li><strong>Barva:</strong> Mat črna</li>
+                    <li><strong>Material:</strong> Aluminij z visoko trdnostjo</li>
+                    <li><strong>Teža:</strong> Prilagojena za terensko vožnjo</li>
+                </ul>
+
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Izberite količino:</label>
+                    <input type="number" id="quantity" name="quantity" class="form-control" value="1" min="1" max="10" />
+                </div>
+                
+                <h3>Cena: <span id="price">250,00 €</span> / kos</h3>
+                <button class="btn btn-primary mb-2">Dodaj v košarico</button><br />
+                <a href="E:\novo\Terenska_platišča.html" class="btn btn-secondary">Nazaj na pregled platišč</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center py-4 bg-light">
+    <p>&copy; 2025 Coro's rims. Vse pravice pridržane.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const addToCartButtons = document.querySelectorAll(".btn-primary");
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const card = button.closest(".card-body");
+            const title = card.querySelector(".card-title").innerText;
+            const unitPrice = parseFloat(card.querySelector(".unit-price").innerText);
+            const quantityInput = card.querySelector(".quantity-input");
+            const quantity = parseInt(quantityInput.value);
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Preveri, če izdelek že obstaja
+            const existingItem = cart.find(item => item.title === title);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({ title, unitPrice, quantity });
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Dodano v košarico!");
+        });
+    });
+});
+</script>

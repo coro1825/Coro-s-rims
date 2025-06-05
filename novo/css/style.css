@@ -1,0 +1,203 @@
+/* OSNOVNI RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef2f7;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* KONTEJNER */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* GLAVA */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* NAVIGACIJA */
+nav {
+    background-color: #003366;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #cce5ff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a.active {
+    background-color: #057eff;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* GLAVNA VSEBINA */
+main p {
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+/* OBLIKOVANA TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #004085;
+    color: white;
+    font-weight: 700;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f9ff;
+}
+
+/* OBLIKOVANI SEZNAMI */
+ul, ol {
+    margin: 15px 0 15px 40px;
+    color: #333;
+}
+
+ul li::before {
+    content: "•";
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* OBRAZEC */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+form button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003d80;
+}
+
+/* POZICIONIRANJE IN PORAVNAVE */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* PSEVDORAZREDI ZA POVEZAVE */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* NOGA */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #003366;
+    color: #cce5ff;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* ODZIVNOST */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 8px 0;
+    }
+}

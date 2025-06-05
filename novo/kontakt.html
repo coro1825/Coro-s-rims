@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Coro's rims</title>
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigacija -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Coro's rims</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i> Domov
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-car me-1"></i> Platišča
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Aluminijasta_platišča.html">Aluminijasta platišča</a></li>
+                            <li><a class="dropdown-item" href="Jeklena_platišča.html">Jeklena platišča</a></li>
+                            <li><a class="dropdown-item" href="Terenska_platišča.html">Terenska platišča</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dodatki.html">
+                            <i class="fas fa-cogs me-1"></i> Dodatki
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="o-nas.html">
+                            <i class="fas fa-info-circle me-1"></i> O nas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="kontakt.html">
+                            <i class="fas fa-envelope me-1"></i> Kontakt
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galerija.html">
+                            <i class="fas fa-image me-1"></i> Galerija
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Glava -->
+    <header class="text-center my-4">
+        <h1>Kontaktirajte nas</h1>
+        <p class="lead">Imate vprašanje? Pišite nam ali nas obiščite.</p>
+    </header>
+
+    <!-- Kontaktni obrazec in informacije -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Kontaktni obrazec -->
+            <div class="col-md-6">
+                <h3>Pošljite sporočilo</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ime in priimek</label>
+                        <input type="text" class="form-control" id="name" placeholder="Vaše ime" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-pošta</label>
+                        <input type="email" class="form-control" id="email" placeholder="vaš@email.si" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Sporočilo</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Vaše sporočilo" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Pošlji</button>
+                </form>
+            </div>
+
+            <!-- Kontaktni podatki -->
+            <div class="col-md-6">
+                <h3>Naši podatki</h3>
+                <p><strong>Coro's rims d.o.o.</strong></p>
+                <p>Industrijska cesta 12<br>1000 Ljubljana</p>
+                <p><strong>Telefon:</strong> 01 123 45 67</p>
+                <p><strong>E-pošta:</strong> info@Coro'srims.si</p>
+                <p><strong>Delovni čas:</strong><br>Pon – Pet: 8:00 – 16:00</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5 py-4 bg-light">
+        <p>&copy; 2025 Coro's rims. Vse pravice pridržane.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
